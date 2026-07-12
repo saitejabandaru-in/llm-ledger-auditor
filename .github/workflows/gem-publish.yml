@@ -19,7 +19,7 @@ jobs:
       run: ruby test/test_sprt.rb
       
     - name: Build Gem
-      run: gem build llm_proof.gemspec
+      run: gem build llm_financial_auditor.gemspec
       
     - name: Publish to GitHub Packages
       run: |

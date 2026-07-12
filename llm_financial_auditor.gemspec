@@ -1,11 +1,11 @@
 Gem::Specification.new do |spec|
-  spec.name          = "llm_proof"
-  spec.version       = "0.1.0"
+  spec.name          = "llm_financial_auditor"
+  spec.version       = "0.2.0"
   spec.authors       = ["Sai Teja Bandaru"]
   spec.email         = ["Saitejaroyal2311@gmail.com"]
 
-  spec.summary       = "Wald's Sequential Probability Ratio Testing (SPRT) statistical evaluator for LLM and AI agent output comparison in Ruby."
-  spec.description   = "Rigorous, early-stopping model comparison algorithms for Ruby and Ruby on Rails AI platforms, saving up to 50%+ in LLM token evaluation cost."
+  spec.summary       = "AI-powered Financial Fraud & Ledger Transaction Auditor Gem."
+  spec.description   = "Integrates multiple LLMs to vote on transaction anomalies and flags potential financial fraud on ledger streams using sequential testing."
   spec.homepage      = "https://github.com/saitejabandaru-in/llm-proof-ruby"
   spec.license       = "MIT"
 
