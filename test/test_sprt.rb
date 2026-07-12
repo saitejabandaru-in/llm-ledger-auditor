@@ -1,14 +1,14 @@
 require 'minitest/autorun'
-require_relative '../lib/llm_audit'
+require_relative '../lib/llm_ledger_auditor'
 
 class TestLedgerAuditor < Minitest::Test
   def setup
-    @auditor = LlmAudit::LedgerAuditor.new(alpha: 0.05, beta: 0.10, p0: 0.02, p1: 0.10)
+    @auditor = LlmLedgerAuditor::LedgerAuditor.new(alpha: 0.05, beta: 0.10, p0: 0.02, p1: 0.10)
   end
 
   def test_consensus_normal_transactions
     decision = :continue
-    tx = LlmAudit::Transaction.new("tx-1", 100.0, "Alice", "Bob")
+    tx = LlmLedgerAuditor::Transaction.new("tx-1", 100.0, "Alice", "Bob")
     
     # 40 normal transactions where the majority of 3 LLMs vote false
     40.times do |i|
@@ -22,7 +22,7 @@ class TestLedgerAuditor < Minitest::Test
 
   def test_consensus_fraud_triggers_lock
     decision = :continue
-    tx = LlmAudit::Transaction.new("tx-2", 9999.0, "Alice", "Chacker")
+    tx = LlmLedgerAuditor::Transaction.new("tx-2", 9999.0, "Alice", "Chacker")
 
     # 15 fraudulent transactions where the majority of 3 LLMs vote true
     15.times do |i|

@@ -1,4 +1,4 @@
-module LlmAudit
+module LlmLedgerAuditor
   class Transaction
     attr_reader :id, :amount, :sender, :receiver, :metadata
     
