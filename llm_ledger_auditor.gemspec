@@ -1,5 +1,5 @@
 Gem::Specification.new do |spec|
-  spec.name          = "llm_ledger_auditor"
+  spec.name          = "llm_ledger_auditor_gem"
   spec.version       = "0.2.1"
   spec.authors       = ["Sai Teja Bandaru"]
   spec.email         = ["Saitejaroyal2311@gmail.com"]
